@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplate') %>
+
+<div id="cluster-map" ></div>
+
+<form class="d-flex w-100 my-5 mx-auto" role="search" action="/campgrounds" method="GET">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+
+<% if(campgrounds.docs.length) { %>
+    <% for(let campground of campgrounds.docs) { %>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <% if(campground.images.length) { %>
+                    <img crossorigin="anonymous" class="img-fluid rounded-start" src="<%= campground.images[0].url %>" alt="Campground Image">
+                    <% } else { %>
+                    <img crossorigin="anonymous" class="img-fluid rounded-start" src="https://res.cloudinary.com/dgch27ot5/image/upload/v1717952099/YelpCamp/em2dclgga95ipgkrs9se.webp" alt="Campground Image">
+                    <% } %>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= campground.title %></h5>
+                        <p class="card-text"><%= campground.description %></p>
+                        <p class="card-text">
+                            <small class="text-muted"><%= campground.location %></small>
+                        </p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">View <%= campground.title %></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <% } %>
+<% } else { %>
+    <div class="row">
+        <div class="col-6 offset-3 text-center">
+            <img src="https://res.cloudinary.com/dgch27ot5/image/upload/w_300/v1718308984/No_Results_Found_geswv2.png" alt="">
+            <h2 class="alert-heading ">No Results Found</h4>
+            
+        </div>
+    </div>
+    
+<% } %>        
+<%- include('../partials/paginate') %>
+<script>
+    const mapToken = '<%= process.env.MAPBOX_TOKEN %>';
+    const campgrounds = {features: <%- JSON.stringify(campgrounds.docs) %>}
+</script>
+
+<script src="/javascripts/clusterMap.js"></script>

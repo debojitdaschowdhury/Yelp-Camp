@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row justify-content-center w-100">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">Reset Password</h5>
+                    <form action="/reset/<%= token %>" method="POST" class="validated-form" novalidate>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" for="password">New Password</label>
+                            <input class="form-control" type="password" name="password" placeholder="password" id="password" autofocus required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="confirm">Confirm Password</label>
+                            <input class="form-control" type="password" name="confirm" placeholder="password" id="confirm" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                       
+                        <button class="btn btn-success w-100">Update Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
