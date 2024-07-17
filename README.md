@@ -2,7 +2,6 @@
 
 Welcome to **Yelp Camp**, a full-stack web application where users can share and review campgrounds. This project is a part of Colt Steele's Courses.
 
-
 ## Features
 
 - **User Authentication:** Users can sign up, log in, and log out.
@@ -13,51 +12,52 @@ Welcome to **Yelp Camp**, a full-stack web application where users can share and
 - **Responsive Design:** Somewhat mobile-friendly UI.
 - **Flash Messages:** Informative alerts for user actions (e.g., login success, errors).
 
-
 ## Demo
 
 Check out the live demo [here](https://campshare-5cpt.onrender.com).
-
 
 ## Installation
 
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/debojitdaschowdhury/Yelp-Camp.git
-    cd Yelp-Camp
-    ```
+
+   ```bash
+   git clone https://github.com/debojitdaschowdhury/Yelp-Camp.git
+   cd Yelp-Camp
+   ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. **Set up environment variables:**
-    Create a `.env` file in the root directory and add the following:
-    ```
-    DB_URL=<your-mongo-db-connection-string>
-    CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
-    MAPBOX_TOKEN=<your-mapbox-token>
-    OAUTH_CLIENTID=<your-oauth-client-id>
-    OAUTH_CLIENT_SECRET=<your-oauth-client-secret>
-    OAUTH_REFRESH_TOKEN=<your-oauth-refresh-token>
-    CLOUDINARY_KEY=<your-cloudinary-key>
-    CLOUDINARY_SECRET=<your-cloudinary-secret>
-    MAIL_USERNAME=<your-email>
-    MAIL_PASSWORD=<your-email-password>
-    SECRET=<your-session-secret>
-    ```
+   Create a `.env` file in the root directory and add the following:
+
+   ```
+   DB_URL=<your-mongo-db-connection-string>
+   CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
+   MAPBOX_TOKEN=<your-mapbox-token>
+   OAUTH_CLIENTID=<your-oauth-client-id>
+   OAUTH_CLIENT_SECRET=<your-oauth-client-secret>
+   OAUTH_REFRESH_TOKEN=<your-oauth-refresh-token>
+   CLOUDINARY_KEY=<your-cloudinary-key>
+   CLOUDINARY_SECRET=<your-cloudinary-secret>
+   MAIL_USERNAME=<your-email>
+   MAIL_PASSWORD=<your-email-password>
+   SECRET=<your-session-secret>
+   ```
 
 4. **Run the application:**
-    ```bash
-    npm start
-    ```
+
+   ```bash
+   npm start
+   ```
 
 5. **Visit the application:**
-    Open your browser and go to `http://localhost:3000`.
-
+   Open your browser and go to `http://localhost:3000`.
 
 ## Usage
 
@@ -69,10 +69,10 @@ To run this project locally, follow these steps:
 6. **Leave a Review:** Share your experience by leaving a review and rating.
 7. **Edit / Delete:** Edit or delete your campgrounds and reviews.
 
-
 ## Technologies Used
 
 - **Front-end:**
+
   - HTML
   - CSS
   - JavaScript
@@ -80,23 +80,26 @@ To run this project locally, follow these steps:
   - Bootstrap
 
 - **Back-end:**
+
   - Node.js
   - Express.js
 
 - **Database:**
+
   - MongoDB
 
 - **Authentication:**
+
   - Passport.js
 
 - **Image Upload:**
+
   - Cloudinary
 
 - **Other:**
   - EJS
   - Express-Session
   - Connect-Flash
-
 
 ## Contributing
 
